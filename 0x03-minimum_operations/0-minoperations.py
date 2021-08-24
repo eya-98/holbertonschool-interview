@@ -10,6 +10,8 @@ def prem(n):
 
 
 def minOperations(n):
+    if (n <= 0):
+        return (0)
     i = 2
     opp = 0
     while(n != 1):
