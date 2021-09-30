@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""UTF-8"""
+"""a method that determines if a given data set represents a valid UTF-8 encoding."""
 
 
 def validUTF8(data):
     """
-    determines if a given data set represents a valid UTF-8 encoding.
+    a method that determines if a given data set represents a valid UTF-8 encoding.
     """
 
     bit1 = 1 << 7
