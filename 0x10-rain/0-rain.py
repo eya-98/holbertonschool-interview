@@ -17,7 +17,6 @@ def rain(walls):
                 counterWidth += 1
                 i += 1
             heightRight = walls[i]
-            print('heeeeey', counterWidth)
             if heightRight is not None and heightLeft is not None:
                 if heightRight < heightLeft:
                     Square += (heightRight * counterWidth)
