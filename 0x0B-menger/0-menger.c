@@ -36,7 +36,7 @@ if (h % 3 == 1 && w % 3 == 1)
 {
 printf(" ");
 }
-else 
+else
 printf("#");
 }
 printf("\n");
