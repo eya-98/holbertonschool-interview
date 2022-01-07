@@ -9,7 +9,7 @@
  */
 void menger(int level)
 {
-int i, j, size;
+int height, width, size, h, w;
 if (level == 0)
 {
 printf("#\n");
@@ -17,27 +17,27 @@ printf("#\n");
 if (level > 0)
 {
 size = pow(3, level);
-for (i = 1; i <= size; i++)
+for (height = 0; height < size; height++)
 {
-j = 1;
-while (j <= size)
+for (width = 0; width < size; width++)
 {
-while (j >= (size / 3) + 1  && j < (size / 3) * 2 + 1
-&& i >= (size / 3) + 1 && i < (size / 3) * 2 + 1)
+h = height;
+w = width;
+while (h && w)
+{
+if (h % 3 == 1 && w % 3 == 1)
+{
+break;
+}
+h = h / 3;
+w = w / 3;
+}
+if (h % 3 == 1 && w % 3 == 1)
 {
 printf(" ");
-j++;
 }
-if (i % 3 == 2 && j % 3 == 2)
-{
-printf(" ");
-j++;
-}
-else
-{
+else 
 printf("#");
-j++;
-}
 }
 printf("\n");
 }
