@@ -26,7 +26,7 @@ try:
                         print("{}: {:d}".format(key, value))
                 lines = 0
 finally:
-    print("File size: {:d}".format(total_size))
+    print("File size: {:d}".format(size))
     for key, value in sorted(STATUS.items()):
         if value != 0:
             print("{}: {:d}".format(key, value))
