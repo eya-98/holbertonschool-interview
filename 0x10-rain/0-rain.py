@@ -6,23 +6,14 @@ def rain(walls):
     """def rain function"""
     counterWidth = 0
     Square = 0
-    i = 0
-    while (i in range(len(walls) - 1)):
-        if walls[i] == 0:
-            if i == 0:
-                heightLeft = None
-            else:
-                heightLeft = walls[i - 1]
-            while(walls[i] == 0):
-                counterWidth += 1
-                i += 1
-            heightRight = walls[i]
-            if heightRight is not None and heightLeft is not None:
-                if heightRight < heightLeft:
-                    Square += (heightRight * counterWidth)
-                else:
-                    Square += (heightLeft * counterWidth)
-            counterWidth = 0
-        else:
-            i += 1
+    i = 1
+    while (i < len(walls) - 1):
+        left = walls[i]
+        for j in range(i):
+            left = max(left, walls[j])
+        right = walls[i]
+        for counter in range(i + 1, len(walls)):
+            right = max(right, walls[counter])
+        Square += (min(left, right) - walls[i])
+        i += 1
     return Square
