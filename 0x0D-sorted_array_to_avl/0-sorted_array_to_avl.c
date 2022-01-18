@@ -1,7 +1,6 @@
 #include "binary_trees.h"
-
 /**
- * insert_into_avl - Inserts an element in the tree
+ * insertElement - Inserts an element in the tree
  * @head: The head
  * @value: new element to insert
  * Return: The new node
@@ -27,7 +26,6 @@ avl_t *insertElement(avl_t *head, int value)
  * @array: array to convert to AVL
  * @first: Position where to start adding element
  * @last: Position where to stop adding element
- *
  * Return: Head of the AVL
  **/
 avl_t *insert_start_end(avl_t *start, int *array, int first, int last)
@@ -54,7 +52,6 @@ avl_t *insert_start_end(avl_t *start, int *array, int first, int last)
  * sorted_array_to_avl - Converts an array to AVL
  * @array: Array to convert
  * @size: Number of elements in the array
- *
  * Return: head of the AVL
  **/
 avl_t *sorted_array_to_avl(int *array, size_t size)
