@@ -6,6 +6,8 @@ def makeChange(coins, total):
     """makeChange"""
     if total is None or total <= 0:
         return 0
+    if coins is None or len(coins) == 0:
+        return -1
     sum = 0
     coins = sorted(coins, reverse=True)
     while(total):
