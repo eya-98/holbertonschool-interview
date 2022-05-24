@@ -9,17 +9,16 @@ def isWinner(x, nums):
     if (len(nums) >= 2):
         for i in range(x):
             game = 0
-            print(nums)
-            newList = list()
+            # newList = list()
+            number = nums[0]
+            player += 1
             for num in nums:
-                player += 1
-                number = nums[0]
                 if (num % number == 0):
                     nums.remove(num)
                     game += 1
             if (game == 0) or (len(nums) == 1):
                 if (player % 2 == 0):
-                    return 'Maria'
+                    return 'Maria '
                 else:
-                    return 'Ben'
+                    return 'Ben '
     return None
