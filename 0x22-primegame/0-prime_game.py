@@ -19,7 +19,7 @@ def isWinner(x, nums):
             nums = newList
             if (game == 0) or (len(nums) <= 1):
                 if (player % 2 == 0):
-                    return 'Maria '
+                    return 'Maria'
                 else:
-                    return 'Ben '
+                    return 'Ben'
     return None
