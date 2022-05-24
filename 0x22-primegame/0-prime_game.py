@@ -17,8 +17,8 @@ def isWinner(x, nums):
                     newList.remove(num)
                     game += 1
             print(nums)
-            nums = newList        
-            if (game == 0) or (len(nums) <= 1) :
+            nums = newList
+            if (game == 0) or (len(nums) <= 1):
                 if (player % 2 == 0):
                     return 'Maria '
                 else:
