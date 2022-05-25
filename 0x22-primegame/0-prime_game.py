@@ -13,18 +13,26 @@ def isWinner(x, nums):
             number = nums[0]
             player += 1
             for num in nums:
-                if (num % number == 0):
-                    newList.remove(num)
-                    game += 1
-            nums = newList
-            if (game == 0) or (len(nums) == 1):
+                if(len(nums) > 1):
+                    if (num % number == 0):
+                        game += 1
+                        newList.remove(num)
+            print('yeeeeeee', game)
+            nums = newList.copy()
+            print(nums)
+            print(player)
+            if (game == 0):
                 if (player % 2 == 0):
                     return 'Ben'
                 else:
                     return 'Maria'
-            if (len(nums) == 0):
-                if (player % 2 == 0):
-                    return 'Maria'
+            if (game != 0):
+                if (len(nums) == 1) or (len(nums) == 0):
+                    if (player % 2 == 0):
+                        return 'Maria'
+                    else:
+                        return 'Ben'
                 else:
-                    return 'Ben'
+                    continue
+
     return None
