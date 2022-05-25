@@ -18,12 +18,10 @@ def isWinner(x, nums):
                         game += 1
                         newList.remove(num)
             nums = newList.copy()
-            print(nums)
-            print('player',player)
             if (game == 0):
                 if (player % 2 == 0):
                     return 'Ben'
-                else:
+                else:   
                     return 'Maria'
             if (game != 0):
                 if (len(nums) == 1):
