@@ -10,7 +10,10 @@ def isWinner(x, nums):
     """
     prime = 0
     notPrime = 0
+
     if nums:
+        if x <= 0 or nums is None or min(nums) < 0:
+            return None
         for num in nums:
             if (num > 0):
                 if(num % 2 == 0):
