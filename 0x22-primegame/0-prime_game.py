@@ -15,6 +15,7 @@ def isWinner(x, nums):
         if x <= 0 or nums is None or min(nums) < 0:
             return None
         for num in nums:
+            print(num)
             if (num > 0):
                 if(num % 2 == 0):
                     prime += 1
