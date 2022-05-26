@@ -21,5 +21,4 @@ def isWinner(x, nums):
             return "Maria"
         else:
             return "Ben"
-    else:
-        return None
+    return None
