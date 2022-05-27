@@ -1,7 +1,6 @@
 #include "substring.h"
 /**
 * find_substring - finds all possible substrings containing a list of words
-* within a given string
 * @s: string to scan
 * @words: array of words all substrings must be concatenation arrangement of
 * @nb_words: number of elements in array words
